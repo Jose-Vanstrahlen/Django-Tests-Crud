@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="container py-5 background-image">
+        <section class="card card-body">
+            <h1 class="display-1 text-center">Investigacion</h1>
+            <p class="text-center">Planificacion de planes de trabajo, para el area de investigacion.</p>
+        </section>
+    </main>
+
+    <div class="text-center" style="margin-top: 10px; margin-bottom: 20px;">
+        <a class="btn btn-primary" href="/singin/" style="margin-right: 70px;">
+            Login
+        </a>
+        <a class="btn btn-primary" href="/singup/">
+            Sign Up
+        </a>
+    </div>
+
+    <div class="d-flex justify-content-end">
+        <section class="card card-body">
+            <img src="{% static 'IMG-Home2.jpg' %}" alt="" width="650" style="display: block; margin: 0 auto;">
+        </section>
+    </div>
+{% endblock %}

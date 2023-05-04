@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+        <div>
+            <div class="col-md-a offset-md-4 mt-5"></div>
+                <h1 class="text-center display-3 py-5">Tareas Completadas</h1>
+                <ul class="list-group">
+
+                    {% for task in tasks %}
+                        <a class="list-group-item" href="{% url 'tasks_detail' task.id %}">
+                            <header class="d-flex justify-content-between">
+                                <strong class="fst-normal">{{task.Titulo}}</strong>
+                                <p>{{task.Fecha_Finalizacion}}</p>
+                            </header>
+                        </a>    
+                    {% endfor %}
+
+                </ul>
+    
+{% endblock %}
